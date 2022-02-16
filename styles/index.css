@@ -1,0 +1,94 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+header {
+    height: 10%;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header #header_left {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 8%;
+}
+header #header_left #menu_toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #FFF;
+    border: solid #000 1px;
+    border-radius: 5px;
+}
+header #header_left #logo h1 {
+    font-weight: 200;
+    font-family: 'Poppins', sans-serif;
+}
+header #header_right{
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 8%;
+}
+header #header_right #notifications {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #FFF;
+    border: solid #000 1px;
+    border-radius: 5px;
+}
+header #header_right #user_name {
+    font-size: 1.25rem;
+}
+header #header_right #user_menu_toggle {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #FFF;
+    border: solid #000 1px;
+    border-radius: 50%;
+}
+
+main {
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+main div {
+    width: 40%;
+    height: 35%;
+    border: solid black 1px;
+    border-radius: 5px;
+}
+main div a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+main div a h3 {
+    font-weight: 400;
+}
+main div a img {
+    width: 6rem;
+}
+
+
+footer {
+    height: 5%;
+    border: solid black 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

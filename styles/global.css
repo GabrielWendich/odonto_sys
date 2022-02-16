@@ -1,0 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: black;
+    font-weight: unset;
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+}
+
+
+/* font-family: 'Poppins', sans-serif; - 100, 400
+font-family: 'Zen Kaku Gothic Antique', sans-serif; - 300 */
