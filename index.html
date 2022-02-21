@@ -7,33 +7,35 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&family=Zen+Kaku+Gothic+Antique:wght@400&display=swap" rel="stylesheet">
+    <!-- ICONS -->
+    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="./styles/global.css">
     <link rel="stylesheet" href="./styles/index.css">
     <title>Sistema ODONTO.nga</title>
 </head>
 <body>
-    <header>
-        <div id="header_left">
-            <div id="logo">
+    <header id="header">
+        <div class="header_left">
+            <div class="logo">
                 <a href="./index.html">
-                    <h1>ODONTO.nga</h1>
+                    <h1>ODONTO.<span>nga</span></h1>
                 </a>
             </div>
     
-            <button id="menu_toggle">
-                <img src="./assets/menu_toggle.svg" alt="Menu">
-            </button>
+            <div id="menu_toggle">
+                <i class="icon-menu_toggle"></i>
+            </div>
         </div>
 
-        <div id="header_right">
+        <div class="header_right">
             <button id="notifications">
-                <img src="./assets/notification.svg" alt="Notificações">
+                <i class="icon-notification"></i>
             </button>
             
             <h2 id="user_name">Usuário</h2>
     
             <button id="user_menu_toggle">
-                <img src="./assets/patient.svg" alt="Foto usuário">
+                <i class="icon-patient"></i>
             </button>
         </div>
     </header>
@@ -42,25 +44,25 @@
         <div id="schedule">
             <a href="http://" target="_blank">
                 <h3>Agenda</h3>
-                <img src="./assets/schedule.svg" alt="Agenda">
+                <i class="icon-calendar"></i>
             </a>
         </div>
         <div id="patients">
             <a href="http://" target="_blank">
                 <h3>Pacientes</h3>
-                <img src="./assets/patient.svg" alt="Pacientes">
+                <i class="icon-patient"></i>
             </a>
         </div>
         <div id="documentation">
             <a href="http://" target="_blank">
                 <h3>Documentação</h3>
-                <img src="./assets/documents.svg" alt="Documentação">
+                <i class="icon-documents"></i>
             </a>
         </div>
         <div id="financial">
             <a href="http://" target="_blank">
                 <h3>Financeiro</h3>
-                <img src="./assets/piggy_bank.svg" alt="Financeiro">
+                <i class="icon-wallet"></i>
             </a>
         </div>
     </main>

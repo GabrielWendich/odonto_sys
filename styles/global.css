@@ -9,6 +9,8 @@
     font-family: 'Zen Kaku Gothic Antique', sans-serif;
 }
 
-
+a {
+    display: inline-flex;
+}
 /* font-family: 'Poppins', sans-serif; - 100, 400
 font-family: 'Zen Kaku Gothic Antique', sans-serif; - 300 */
