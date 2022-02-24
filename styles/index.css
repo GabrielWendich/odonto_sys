@@ -1,12 +1,14 @@
 :root {
     font-size: 62.5%;
 
+    --body-color: hsl(0 0% 98%);
     --blue: hsl(216, 64%, 48%);
     --light-blue: hsl(216, 70%, 71%);
     --light-blue-opt: hsla(216, 70%, 71%, 0.712);
     --orange: hsl(36, 94%, 57%);
     --light-orange: hsl(36, 89%, 75%);
     --green: hsl(76, 56%, 70%);
+    --light-green: hsl(83, 65%, 75%);
     --dark-green: hsl(76, 29%, 59%);
     --red: hsl(0, 100%, 56%);
   }
@@ -19,35 +21,55 @@ body {
     justify-content: space-between;
 }
 
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button {
+    width: 4rem;
+    height: 4rem;
+    background-color: var(--orange);
+    border-radius: 5px;
+
+    cursor: pointer;
+    position: relative;
+    top: 0px;
+    left: 0px;
+
+    transition: .3s;
+}
+.button:hover {
+    box-shadow: .1rem .1rem .2rem hsl(0, 2%, 35%);
+    
+    top: -1px;
+    right: 1px;
+}
+.header-icon {
+    font-size: 3rem;
+}
+
+
+
+
 
 #header {
     height: 10%;
-    display: flex;
-    align-items: center;
     justify-content: space-between;
 
     box-shadow: 0 0 .5rem hsl(0, 2%, 35%);
     background-color: var(--light-orange);
 }
 #header .header_left {
-    width: 20%;
-    display: flex;
-    align-items: center;
-    gap: 12%;
-}
-#menu_toggle {
-    width: 4rem;
-    height: 4rem;
-    background-color: var(--orange);
-    border-radius: 5px;
-    text-align: center;
-}
-#menu_toggle .icon-menu_toggle {
-    font-size: 3rem;
+    width: 18%;
+    justify-content: space-between;
+
+    position: relative;
 }
 #header .header_left .logo {
     position: relative;
-    z-index: 1;
+    z-index: 3;
 }
 #header .header_left .logo::before {
     content: '';
@@ -75,44 +97,137 @@ body {
 #header .header_left .logo span {
     color: var(--orange);
 }
-#header .header_right{
-    width: 20%;
+
+
+
+
+#header .menu {
+    visibility: hidden;
+    width: 0%;
+    position: absolute;
+
+    flex-direction: column;
+
+    transition: width .3s;
+}
+#header .menu .links {
+    width: 85%;
+    height: 75%;
+    margin-top: 6rem;
+}
+#header .menu ul {
+    width: 100%;
+    height: 90%;
+    font: 400 3rem 'Poppins', sans-serif;
+
+    display: none;
+    gap: 1.5rem;
+}
+#header .menu.show ul {
+    display: grid;
+}
+#header .menu ul li,
+#header .sac {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    background-color: var(--green);
+
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    gap: 8%;
+    justify-content: center;
+    gap: .2rem;
+    transition: .3s;
 }
-#header .header_right #notifications {
-    width: 4rem;
-    height: 4rem;
-    background-color: #FFF;
-    border: solid #000 1px;
-    border-radius: 5px;
+#header .menu ul li:hover,
+#header .sac:hover {
+    box-shadow: .1rem .1rem .4rem hsl(0, 2%, 35%);
+    background-color: var(--light-green);
 }
+#header .menu ul li i {
+    font-size: 5rem;
+    margin-left: 5rem;
+}
+#header .menu ul li a,
+#header .sac a {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: center;
+    place-content: center;
+    gap: 15%;
+}
+#header .menu .sac {
+    height: 5rem;
+    width: 70%;
+    font: 400 2rem 'Poppins', sans-serif;
+    background-color: var(--light-blue);
+}
+#header .icon-cancel {
+    cursor: pointer;
+
+    font-size: 3rem;
+    color: var(--orange);
+
+    position: absolute;
+    top: 3%;
+    right: 5%;
+    z-index: 3;
+}
+#header .menu.show {
+    visibility: visible;
+    width: 100%;
+
+    height: 100vh;
+    width: 35vw;
+    position: absolute;
+    top: -1.5rem;
+    left: 0;
+    background-color: var(--body-color);
+ 
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+
+
+
+#header .header_right{
+    width: 17%;
+    margin-right: 3rem;
+    justify-content: space-between;
+}
+
 #header .header_right #user_name {
     font-size: 2rem;
 }
-#header .header_right #user_menu_toggle {
-    width: 4rem;
-    height: 4rem;
-    background-color: #FFF;
-    border: solid #000 1px;
-    border-radius: 50%;
-}
 
-main {
+/* #header .header_right .user_menu_toggle {
+    CRIAR CIRCULO COM FOTO E BORDER
+} */
+
+
+
+
+
+main.flex{
     height: 80%;
-    display: flex;
     flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-around;
+    justify-content: space-evenly;
 }
 main div {
     width: 40%;
     height: 35%;
-    /* border: solid black 1px; */
-    border-radius: 5px;
+    border-radius: .5rem;
     box-shadow: 0 0 .5rem hsl(0, 2%, 35%);
+    background-color: var(--green);
+
+    transition: .3s;
+}
+main div:hover {
+    box-shadow: .3rem .3rem .7rem hsl(0, 2%, 35%);
+    background-color: var(--light-green);
 }
 main div a {
     width: 100%;
@@ -131,11 +246,12 @@ main div a i {
 }
 
 
+
+
+
+
 footer {
     height: 5%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
     box-shadow: 0 0 .5rem hsl(0, 2%, 35%);
     background-color: var(--light-blue);

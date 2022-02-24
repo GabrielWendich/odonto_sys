@@ -14,33 +14,59 @@
     <title>Sistema ODONTO.nga</title>
 </head>
 <body>
-    <header id="header">
-        <div class="header_left">
+    <header id="header" class="flex">
+        <div class="header_left flex">
             <div class="logo">
                 <a href="./index.html">
                     <h1>ODONTO.<span>nga</span></h1>
                 </a>
             </div>
     
-            <div id="menu_toggle">
+            <div id="menu" class="menu flex">
+                <div class="links">
+                    <ul>
+                        <li>
+                            <i class="icon-calendar"></i>
+                            <a href="">Agenda</a>
+                        </li>
+                        <li>
+                            <i class="icon-patient"></i>
+                            <a href="">Pacientes</a>
+                        </li>
+                        <li>
+                            <i class="icon-documents"></i>
+                            <a href="">Documentação</a>
+                        </li>
+                        <li>
+                            <i class="icon-wallet"></i>
+                            <a href="">Financeiro</a>
+                        </li>
+                    </ul>
+                </div>
+                <li class="sac">
+                    <a href="">Fale conosco</a>
+                </li>
+                <div class="icon-cancel toggle"></div>
+            </div>
+            
+
+            <div id="open-menu" class="button header-icon flex toggle">
                 <i class="icon-menu_toggle"></i>
             </div>
         </div>
 
-        <div class="header_right">
-            <button id="notifications">
+        <div class="header_right flex">
+            <div id="notifications" class="button header-icon flex">
                 <i class="icon-notification"></i>
-            </button>
-            
+            </div>
             <h2 id="user_name">Usuário</h2>
-    
-            <button id="user_menu_toggle">
+            <div class="user_menu_toggle button header-icon flex">
                 <i class="icon-patient"></i>
-            </button>
+            </div>
         </div>
     </header>
 
-    <main>
+    <main class="flex">
         <div id="schedule">
             <a href="http://" target="_blank">
                 <h3>Agenda</h3>
@@ -67,8 +93,10 @@
         </div>
     </main>
 
-    <footer>
+    <footer class="flex">
         <p>ODONTO.nga© since 2022</p>
     </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
