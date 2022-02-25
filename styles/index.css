@@ -101,7 +101,8 @@ body {
 
 
 
-#header .menu {
+#header .menu,
+#header .menu-config {
     visibility: hidden;
     width: 0%;
     position: absolute;
@@ -127,7 +128,9 @@ body {
     display: grid;
 }
 #header .menu ul li,
-#header .sac {
+#header .sac, 
+#header .menu-config ul li,
+#menu-config .sac {
     width: 100%;
     height: 100%;
     border-radius: .5rem;
@@ -140,7 +143,9 @@ body {
     transition: .3s;
 }
 #header .menu ul li:hover,
-#header .sac:hover {
+#header .sac:hover,
+#header .menu-config ul li:hover,
+#menu-config .sac:hover {
     box-shadow: .1rem .1rem .4rem hsl(0, 2%, 35%);
     background-color: var(--light-green);
 }
@@ -163,7 +168,7 @@ body {
     font: 400 2rem 'Poppins', sans-serif;
     background-color: var(--light-blue);
 }
-#header .icon-cancel {
+.icon-cancel {
     cursor: pointer;
 
     font-size: 3rem;
@@ -207,6 +212,77 @@ body {
     CRIAR CIRCULO COM FOTO E BORDER
 } */
 
+#header .menu-config img {
+    width: 15%;
+    clip-path: circle();
+    margin-top: 1rem;
+}
+#header .menu-config h3 {
+    font-size: 2rem;
+}
+#header .menu-config .links {
+    width: 85%;
+    height: 50%;
+    margin-top: 2rem;
+}
+#header .menu-config ul {
+    width: 100%;
+    height: 45%;
+    font: 400 1.7rem 'Poppins', sans-serif;
+
+    display: none;
+    gap: 1.5rem;
+}
+#header .menu-config.show ul {
+    display: grid;
+}
+#header .menu-config ul li a,
+#menu-config .sac a,
+#menu-config .logout {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    place-content: center;
+}
+#header .menu-config .sac {
+    height: 4rem;
+    width: 30%;
+    font: 400 1.7rem 'Poppins', sans-serif;
+    background-color: var(--light-blue);
+}
+#menu-config .logout {
+    opacity: .9;
+    height: 4rem;
+    width: 30%;
+    margin-top: 1rem;
+    border-radius: .5rem;
+    font: 400 1.7rem 'Poppins', sans-serif;
+    background-color: var(--red);
+    transition: .3s;
+}
+#menu-config .logout:hover {
+    opacity: 1;
+    box-shadow: .1rem .1rem .4rem hsl(0, 2%, 35%);
+}
+#menu-config .icon-cancel {
+    width: 3rem;
+    left: 5%;
+}
+#header .menu-config.show {
+    visibility: visible;
+    width: 100%;
+
+    height: 100vh;
+    width: 35vw;
+    position: absolute;
+    top: -1.5rem;
+    right: 0;
+    background-color: var(--body-color);
+ 
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
 
 
 

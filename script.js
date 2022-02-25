@@ -10,6 +10,24 @@ for (const element of toggle) {
 
 for (const link of links) {
    link.addEventListener('click', () => {
-      manu.classList.remove('show')
+      menu.classList.remove('show')
+   })
+}
+
+
+
+
+const menuConfig = document.querySelector("#menu-config")
+const toggleConfig = document.querySelectorAll("#header .toggle-config")
+
+for (const element of toggleConfig) {
+   element.addEventListener('click', () => {
+      menuConfig.classList.toggle('show')
+   })
+}
+
+for (const link of links) {
+   link.addEventListener('click', () => {
+      menuConfig.classList.remove('show')
    })
 }
